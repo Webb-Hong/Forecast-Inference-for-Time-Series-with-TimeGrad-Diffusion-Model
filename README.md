@@ -56,9 +56,12 @@ $$\bar{x}_t = \frac{1}{S} \sum_{s=1}^{S} x_{t,s}$$
  
 $$Q_t^{*}(\tau) = x_{t,\,(\lfloor S\tau \rfloor)}$$
  
-**Forecast median:** $Q_t^{*}(0.5)$
+**Forecast median:** 
+
+$$Q_t^{*}(0.5)$$
  
 **$100\tau$% prediction interval:** 
+
 $$\left( Q_t^{*}\left(\frac{1-\tau}{2}\right),\quad Q_t^{*}\left(\frac{1+\tau}{2}\right) \right)$$
 
 ### Extreme Quantile Estimation via GPD
