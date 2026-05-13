@@ -28,7 +28,7 @@ DDPM consists of two processes:
 
 The training objective simplifies to minimizing the mean squared error between the true added noise $\epsilon$ and the model's noise prediction $\epsilon_\theta$:
 
-$$L_{\text{simple}}(\theta) = \mathbb{E}_{k,\, x^0,\, \epsilon} \left[\left\| \epsilon - \epsilon_\theta\!\left(\sqrt{\widetilde{\alpha}_k}\, x^0 + \sqrt{1 - \widetilde{\alpha}_k}\, \epsilon,\; k\right) \right\|^2 \right]$$
+$$L_{\text{simple}}(\theta) = \mathbb{E}_{k,\, x^0,\, \epsilon} \left[\left\| \epsilon - \epsilon_\theta\left(\sqrt{\widetilde{\alpha}_k}x^0 + \sqrt{1 - \widetilde{\alpha}_k} \epsilon,\; k\right) \right\|^2 \right]$$
 
 ### TimeGrad
 
@@ -54,7 +54,7 @@ $$\bar{x}_t = \frac{1}{S} \sum_{s=1}^{S} x_{t,s}$$
 
 **$100\tau$%-th quantile** (order statistic of sorted samples):
 
-$$Q_t^{*}(\tau) = x_{t,\,(\lfloor S\tau \rfloor)}$$
+$$Q_t^{*}(\tau) = x_{t, (\lfloor S\tau \rfloor)}$$
 
 **Forecast median:** $Q_t^{*}(0.5)$
 
