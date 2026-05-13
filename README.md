@@ -62,6 +62,8 @@ $$Q_t^{*}(\tau) = x_{t, (\lfloor S\tau \rfloor)}$$
 
 $$\left( Q_t^{*}\left(\frac{1-\tau}{2}\right), Q_t^{*}\left(\frac{1+\tau}{2}\right) \right)$$
 
+$$\Bigl( Q_t^{*}\!\left(\tfrac{1-\tau}{2}\right),\; Q_t^{*}\!\left(\tfrac{1+\tau}{2}\right) \Bigr)$$
+
 ### Extreme Quantile Estimation via GPD
 
 Because sample quantiles are bounded by the sample minimum and maximum, the **Generalised Pareto Distribution (GPD)** is fitted to the tails of the generated samples to extrapolate extreme quantiles (e.g., 0.5% and 99.5%), enabling more reliable tail inference.
