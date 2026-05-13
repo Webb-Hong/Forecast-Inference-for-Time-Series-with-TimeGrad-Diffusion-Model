@@ -34,11 +34,11 @@ $$L_{\text{simple}}(\theta) = \mathbb{E}_{k,\, x^0,\, \epsilon} \left[\left\| \e
 
 TimeGrad (Rasul et al., 2021) extends DDPM to **multivariate probabilistic time series forecasting** by conditioning the noise prediction network on a hidden state $h_{t-1}$ produced by an RNN module encoding historical observations and covariates:
 
-$$h_t \leftarrow \text{RNN}_\theta\left(\left[\, x^0_t,\, c_t\, \right]^\top,\; h_{t-1}\right)$$
+$$h_t \leftarrow \text{RNN}_\theta\left(\left[x^0_t, c_t \right]^\top, h_{t-1}\right)$$
 
 The conditional forecast distribution is factorised autoregressively:
 
-$$p_\theta(x^0_{t_0+1:T} \mid x^0_{1:t_0},\, c_{1:T}) = \prod_{t=t_0+1}^{T} p_\theta(x^0_t \mid h_{t-1})$$
+$$p_\theta(x^0_{t_0+1:T} \mid x^0_{1:t_0}, c_{1:T}) = \prod_{t=t_0+1}^{T} p_\theta(x^0_t \mid h_{t-1})$$
 
 The sampling procedure generates $S$ independent forecast trajectories, providing a Monte Carlo approximation of the full predictive distribution.
 
@@ -172,8 +172,7 @@ Because sample quantiles are bounded by the sample minimum and maximum, the **Ge
 │   ├── ddpm_process.png               # DDPM forward & reverse process diagram
 │   ├── electricity_demand.png         # Australia Electricity Dataset overview
 │   └── stock_prices.png               # Stock Price Dataset overview
-├── 洪梓瑋口試簡報.pdf                   # Thesis defence presentation slides
-└── 洪梓瑋碩士論文_0709_formal_new.pdf   # Full master's thesis
+└── 洪梓瑋口試簡報.pdf                   # Thesis defence presentation slides
 ```
 
 ---
