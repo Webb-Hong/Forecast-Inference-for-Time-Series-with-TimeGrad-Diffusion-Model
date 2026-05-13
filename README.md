@@ -60,7 +60,7 @@ $$Q_t^{*}(\tau) = x_{t,\,(\lfloor S\tau \rfloor)}$$
 
 **$100\tau$% prediction interval:**
 
-$$\Bigl( Q_t^{*}\!\left(\tfrac{1-\tau}{2}\right),\; Q_t^{*}\!\left(\tfrac{1+\tau}{2}\right) \Bigr)$$
+$$\left( Q_t^{*}\left(\frac{1-\tau}{2}\right), Q_t^{*}\left(\frac{1+\tau}{2}\right) \right)$$
 
 ### Extreme Quantile Estimation via GPD
 
