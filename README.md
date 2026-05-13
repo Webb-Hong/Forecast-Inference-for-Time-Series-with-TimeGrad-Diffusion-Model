@@ -48,10 +48,10 @@ Given $S$ generated samples $\{x_{t,s} : s = 1, \ldots, S\}$ at each forecast st
 
 | Inference | Formula |
 |-----------|---------|
-| Forecast mean | $\bar{x}_t = \frac{1}{S}\sum_{s=1}^{S} x_{t,s}$ |
-| $\tau$-quantile | $Q^*_t(\tau) = x_{t,(\lfloor S\tau \rfloor)}$ |
-| Forecast median | $Q^*_t(0.5)$ |
-| $100\tau\%$ prediction interval | $\left(Q^*_t\!\left(\frac{1-\tau}{2}\right),\; Q^*_t\!\left(\frac{1+\tau}{2}\right)\right)$ |
+| Forecast mean | $$\bar{x}_t = \frac{1}{S}\sum_{s=1}^{S} x_{t,s}$$ |
+| $\tau$-quantile | $$Q^*_t(\tau) = x_{t,(\lfloor S\tau \rfloor)}$$ |
+| Forecast median | $$Q^*_t(0.5)$$ |
+| $100\tau\%$ prediction interval | $$\left(Q^*_t\!\left(\frac{1-\tau}{2}\right),\; Q^*_t\!\left(\frac{1+\tau}{2}\right)\right)$$ |
 
 ### Extreme Quantile Estimation via GPD
 
@@ -156,9 +156,7 @@ Because sample quantiles are bounded by the sample minimum and maximum, the **Ge
 ```
 .
 ├── README.md
-├── 洪梓瑋口試簡報.pdf          # Thesis defence presentation slides
-├── 洪梓瑋碩士論文_0709_formal_new.pdf  # Full master's thesis
-└── ...                        # Source code (model, training, evaluation)
+└── 洪梓瑋口試簡報.pdf          # Thesis defence presentation slides
 ```
 
 ---
