@@ -62,7 +62,7 @@ $$Q_t^{*}(0.5)$$
  
 **$100\tau$% prediction interval:** 
 
-$$\left( Q_t^{*}\left(\frac{1-\tau}{2}\right),\quad Q_t^{*}\left(\frac{1+\tau}{2}\right) \right)$$
+$$(Q_t^{*}(\frac{1-\tau}{2}), Q_t^{*}(\frac{1+\tau}{2}))$$
 
 ### Extreme Quantile Estimation via GPD
 
