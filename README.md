@@ -26,13 +26,13 @@ DDPM consists of two processes:
 
 The training objective simplifies to minimizing the mean squared error between the true added noise $\epsilon$ and the model's noise prediction $\epsilon_\theta$:
 
-$$L_{\text{simple}}(\theta) = \mathbb{E}_{k, x^0, \epsilon} \left[ \left\| \epsilon - \epsilon_\theta\!\left(\sqrt{\tilde{\alpha}_k}\, x^0 + \sqrt{1 - \tilde{\alpha}_k}\, \epsilon,\; k\right) \right\|^2 \right]$$
+$$L_{\text{simple}}(\theta) = \mathbb{E}_{k, x^0, \epsilon} \left[ \left\| \epsilon - \epsilon_\theta\left(\sqrt{\tilde{\alpha}_k}\, x^0 + \sqrt{1 - \tilde{\alpha}_k}\, \epsilon,\; k\right) \right\|^2 \right]$$
 
 ### TimeGrad
 
 TimeGrad (Rasul et al., 2021) extends DDPM to **multivariate probabilistic time series forecasting** by conditioning the noise prediction network on a hidden state $h_{t-1}$ produced by an RNN module encoding historical observations and covariates:
 
-$$h_t \leftarrow \text{RNN}_\theta\!\left(\begin{bmatrix} x^0_t \\ c_t \end{bmatrix},\, h_{t-1}\right)$$
+$$h_t \leftarrow \text{RNN}_\theta\left(\begin{bmatrix} x^0_t \\ c_t \end{bmatrix},\, h_{t-1}\right)$$
 
 The conditional forecast distribution is factorised autoregressively:
 
@@ -58,7 +58,7 @@ $$Q^* _t(\tau) = x_{t,(\lfloor S\tau \rfloor)}$$
  
 **100τ% prediction interval:**
  
-$$\left( Q^* _t\!\left(\frac{1-\tau}{2}\right),\; Q^* _t\!\left(\frac{1+\tau}{2}\right) \right)$$
+$$\left( Q^* _t\left(\frac{1-\tau}{2}\right),\; Q^* _t\left(\frac{1+\tau}{2}\right) \right)$$
 
 ### Extreme Quantile Estimation via GPD
 
