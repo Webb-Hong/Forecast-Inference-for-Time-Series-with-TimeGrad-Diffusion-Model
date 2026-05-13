@@ -43,15 +43,22 @@ The sampling procedure generates $S$ independent forecast trajectories, providin
 ---
 
 ## Forecast Inferences
-
-Given $S$ generated samples $\{x_{t,s} : s = 1, \ldots, S\}$ at each forecast step $t$, the following inferences are computed:
-
-| Inference | Formula |
-|-----------|---------|
-| Forecast mean | $$\bar{x}_t = \frac{1}{S}\sum_{s=1}^{S} x_{t,s}$$ |
-| $\tau$-quantile | $$Q^*_t(\tau) = x_{t,(\lfloor S\tau \rfloor)}$$ |
-| Forecast median | $$Q^*_t(0.5)$$ |
-| $100\tau\%$ prediction interval | $$\left(Q^*_t\!\left(\frac{1-\tau}{2}\right),\; Q^*_t\!\left(\frac{1+\tau}{2}\right)\right)$$ |
+ 
+Given $S$ generated samples $\lbrace x_{t,s} : s = 1, \ldots, S \rbrace$ at each forecast step $t$, the following inferences are computed:
+ 
+**Forecast mean:**
+ 
+$$\bar{x}_t = \frac{1}{S} \sum_{s=1}^{S} x_{t,s}$$
+ 
+**100τ%-th quantile** (order statistic of sorted samples):
+ 
+$$Q^* _t(\tau) = x_{t,(\lfloor S\tau \rfloor)}$$
+ 
+**Forecast median:** $Q^* _t(0.5)$
+ 
+**100τ% prediction interval:**
+ 
+$$\left( Q^* _t\!\left(\frac{1-\tau}{2}\right),\; Q^* _t\!\left(\frac{1+\tau}{2}\right) \right)$$
 
 ### Extreme Quantile Estimation via GPD
 
