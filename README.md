@@ -34,7 +34,7 @@ $$L_{\text{simple}}(\theta) = \mathbb{E}_{k,\, x^0,\, \epsilon} \left[\left\| \e
 
 TimeGrad (Rasul et al., 2021) extends DDPM to **multivariate probabilistic time series forecasting** by conditioning the noise prediction network on a hidden state $h_{t-1}$ produced by an RNN module encoding historical observations and covariates:
 
-$$h_t \leftarrow \text{RNN}_\theta\!\left(\left[\, x^0_t,\, c_t\, \right]^\top,\; h_{t-1}\right)$$
+$$h_t \leftarrow \text{RNN}_\theta\left(\left[\, x^0_t,\, c_t\, \right]^\top,\; h_{t-1}\right)$$
 
 The conditional forecast distribution is factorised autoregressively:
 
